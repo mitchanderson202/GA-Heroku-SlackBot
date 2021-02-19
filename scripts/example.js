@@ -12,9 +12,9 @@
 
 module.exports = (robot) => {
 
-  // robot.hear(/badger/i, (res) => {
-  //   res.send('Badgers? BADGERS? WE DON’T NEED NO STINKIN BADGERS')
-  // })
+  robot.respond(/sydney/i, (res) => {
+    res.send('? Sydney is the best place in the world.')
+  })
   //
   // robot.respond(/open the (.*) doors/i, (res) => {
   //   const doorType = res.match[1]
