@@ -13,8 +13,14 @@
 module.exports = (robot) => {
 
   robot.respond(/sydney/i, (res) => {
-    res.send('? Sydney is the best place in the world.')
+    res.send('Sydney is the best place in the world.')
   })
+
+  robot.respond(/french fries/i, (res) => {
+    res.send('Lots of people believe that french fries were first cooked in france. In fact, it was greece.')
+  })
+
+
   //
   // robot.respond(/open the (.*) doors/i, (res) => {
   //   const doorType = res.match[1]
