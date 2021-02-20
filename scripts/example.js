@@ -17,7 +17,7 @@ module.exports = (robot) => {
   })
 
   robot.respond(/Dog/i, (res) => {
-    res.send(scripts\Image\Dog.JPG)
+    res.send('scripts\Image\Dog.JPG')
   })
 
   const jokes = ["Lots of people believe that french fries we're first cooked in France. In face, it was Greece.", "What's a computer's favorite beat? Al algo-rhythm.", "I dropped my laptop off my uncle's boat the other day, not there's aDell Rolling in the Deep", "What gender is the chocolate bar? Her/She", "The inventer of Velcro died. RIP", "Elton John hates Spinach...He's a RocketMan"]
@@ -27,7 +27,7 @@ module.exports = (robot) => {
   }
 
   robot.respond(/Joke time/i, (res) => {
-    res.send(tellAJoke.random)
+    res.send(tellAJoke)
   })
 
 
