@@ -12,12 +12,22 @@
 
 module.exports = (robot) => {
 
-  robot.respond(/sydney/i, (res) => {
-    res.send('Sydney is the best place in the world.')
+  robot.respond(/Hi Hubot/i, (res) => {
+    res.send("Hi Mitch")
   })
 
-  robot.respond(/french fries/i, (res) => {
-    res.send('Lots of people believe that french fries were first cooked in france. In fact, it was greece.')
+  robot.respond(/Dog/i, (res) => {
+    res.send(scripts\Image\Dog.JPG)
+  })
+
+  const jokes = ["Lots of people believe that french fries we're first cooked in France. In face, it was Greece.", "What's a computer's favorite beat? Al algo-rhythm.", "I dropped my laptop off my uncle's boat the other day, not there's aDell Rolling in the Deep", "What gender is the chocolate bar? Her/She", "The inventer of Velcro died. RIP", "Elton John hates Spinach...He's a RocketMan"]
+ 
+  function tellAJoke() {
+    return Math.floor(Math.random() * jokes.length);
+  }
+
+  robot.respond(/Joke time/i, (res) => {
+    res.send(tellAJoke.random)
   })
 
 
