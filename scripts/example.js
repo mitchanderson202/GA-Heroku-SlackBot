@@ -24,7 +24,7 @@ module.exports = (robot) => {
   }
 
   robot.respond(/Joke time/i, (res) => {
-    res.send(`I have a Joke... ~${jokes[tellAJoke()]}~`);
+    res.send(`I have a Joke... ${jokes[tellAJoke()]}`);
   })
 
 
