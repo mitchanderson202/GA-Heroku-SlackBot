@@ -1,5 +1,7 @@
 'use strict'
 
+const { User } = require("hubot")
+
 // Description:
 //   Example scripts for you to examine and try out.
 //
@@ -27,6 +29,12 @@ module.exports = (robot) => {
     res.send(`I have a Joke... ${jokes[tellAJoke()]}`);
   })
 
+  var a = user.prompt();
+  var b = user.prompt();
+
+  robot.respond(/Math?/i, (res) => {
+    a + b;
+  })
 
   //
   // robot.respond(/open the (.*) doors/i, (res) => {
