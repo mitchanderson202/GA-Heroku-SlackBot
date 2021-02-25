@@ -29,11 +29,13 @@ module.exports = (robot) => {
     res.send(`I have a Joke... ${jokes[tellAJoke()]}`);
   })
 
-  var dice1 = Math.floor(Math.random() * 6) + 1;
-  var dice2 = Math.floor(Math.random() * 6) + 1;
+  
 
 robot.respond(/Random math/i, (res) => {
-  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${dice1} + ${dice2}`);
+  var dice1 = Math.floor(Math.random() * 6) + 1;
+  var dice2 = Math.floor(Math.random() * 6) + 1;
+  var dice3 = dice1 + dice2;
+  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${dice3}`);
 })
 
   //
