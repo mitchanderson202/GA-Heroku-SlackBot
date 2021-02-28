@@ -38,15 +38,14 @@ function rollDice() {
   var dice1 = Math.floor(Math.random() * 6) + 1;
   var dice2 = Math.floor(Math.random() * 6) + 1;
   var totalScore = dice1 + dice2;
-  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
 }
 
-function findPlayer() {
+// function findPlayer() {
 
-}
+// }
 
 function highScore() {
-  for (hs = 0; hs < totalScore.value; hs++);
+  for (hs = 0; hs < totalScore; hs++);
      hs = totalScore;
 }
 
@@ -56,6 +55,7 @@ function highScore() {
 
 robot.respond(/Roll dice/i, (res) => {
   rollDice();
+  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
   highScore();
   if(rollDice === maxRolls) {
     res.send(`The highest score is ${highScore}`)
@@ -63,7 +63,6 @@ robot.respond(/Roll dice/i, (res) => {
 })
 
 
-//player a rolled = , player b roller = . Winner is//
 
 
 
