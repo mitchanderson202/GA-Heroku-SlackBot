@@ -60,12 +60,16 @@ function resetCount() {
 robot.respond(/Roll dice/i, (res) => {
   rollDice();
   res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
-  highScore();  
-  if(rollDice === maxRolls) {
-    res.send(`The highest score is ${highScore}`)
-  }
-  resetCount();
 })
+
+
+
+//   highScore();  
+//   if(rollDice === maxRolls) {
+//     res.send(`The highest score is ${highScore}`)
+//   }
+//   resetCount();
+// })
 
 
 
