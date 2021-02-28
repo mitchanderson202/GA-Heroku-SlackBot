@@ -49,17 +49,22 @@ function highScore() {
      hs = totalScore;
 }
 
+function resetCount() {
+  totalScore = 0;
+}
+
 
 //Game//
 
 
 robot.respond(/Roll dice/i, (res) => {
   rollDice();
-  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
   highScore();
+  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
   if(rollDice === maxRolls) {
     res.send(`The highest score is ${highScore}`)
   }
+  then(resetCount());
 })
 
 
