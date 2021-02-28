@@ -60,7 +60,7 @@ robot.respond(/Roll dice/i, (res) => {
   var dice2 = Math.floor(Math.random() * 6) + 1;
   var totalScore = dice1 + dice2;
   res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
-    for (hs = 0; hs < totalScore; hs++);{
+    if (var hs = 0; hs < totalScore; hs++);{
         hs = highScore;
   } res.send(`You win with a score of ${highScore}`);
 })
