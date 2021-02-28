@@ -34,33 +34,32 @@ module.exports = (robot) => {
 var maxRolls = 5;
 
   
-function rollDice() {
-  var dice1 = Math.floor(Math.random() * 6) + 1;
-  var dice2 = Math.floor(Math.random() * 6) + 1;
-  var totalScore = dice1 + dice2;
-  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
-}
-
-// function findPlayer() {
-
+// function rollDice() {
+ 
 // }
 
-function highScore() {
-  for (hs = 0; hs < totalScore; hs++);
-     hs = highScore;
-}
+// // function findPlayer() {
 
-function resetCount() {
-  totalScore = 0;
-}
+// // }
+
+// function highScore() {
+//   for (hs = 0; hs < totalScore; hs++);
+//      hs = highScore;
+// }
+
+// function resetCount() {
+//   totalScore = 0;
+// }
 
 
 //Game//
 
 
 robot.respond(/Roll dice/i, (res) => {
-  rollDice();
-
+  var dice1 = Math.floor(Math.random() * 6) + 1;
+  var dice2 = Math.floor(Math.random() * 6) + 1;
+  var totalScore = dice1 + dice2;
+  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
 })
 
 
