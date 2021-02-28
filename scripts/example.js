@@ -31,12 +31,52 @@ module.exports = (robot) => {
 
   
 
-robot.respond(/Roll dice/i, (res) => {
+var maxRolls = 5;
+
+  
+function rollDice() {
   var dice1 = Math.floor(Math.random() * 6) + 1;
   var dice2 = Math.floor(Math.random() * 6) + 1;
-  var dice3 = dice1 + dice2;
-  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${dice3}`);
+  var totalScore = dice1 + dice2;
+  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
+}
+
+function findPlayer() {
+
+}
+
+function highScore() {
+  for (hs = 0; hs < totalScore.value; hs++);
+     hs = totalScore;
+}
+
+
+//Game//
+
+
+robot.respond(/Roll dice/i, (res) => {
+  rollDice();
+  highScore();
+  if(rollDice === maxRolls) {
+    res.send(`The highest score is ${highScore}`)
+  }
 })
+
+
+//player a rolled = , player b roller = . Winner is//
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   //
   // robot.respond(/open the (.*) doors/i, (res) => {
