@@ -69,8 +69,8 @@ robot.respond(/Roll dice/i, (res) => {
   var totalScore = dice1 + dice2;
   var scoreArr = [];
   if (scoreArr.length < 5) {
-  res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
-  scoreArr.push(totalScore);
+  res.send("you have rolled " + dice1 + "&" + dice2 + " your total score is " + scoreArr.push(totalScore));
+  // scoreArr.push(totalScore);
   } else if (scoreArr.length = 5) {
     res.send(`You win with a score of ${Math.max(scoreArr)}`)
   }
