@@ -64,10 +64,11 @@ module.exports = (robot) => {
   
 
   var scoreArr = []; 
-  var highScore = Math.max(scoreArr);
-  var highScoreTwo = robot.brain.get(totalScore);
+  
 
 robot.respond(/Roll dice/i, (res) => {
+    var highScore = Math.max(scoreArr);
+    var highScoreTwo = robot.brain.get(totalScore);
     var dice1 = Math.floor(Math.random() * 6) + 1;
     var dice2 = Math.floor(Math.random() * 6) + 1;
     var totalScore = dice1 + dice2;
