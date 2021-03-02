@@ -69,8 +69,8 @@ module.exports = (robot) => {
     var totalScore = dice1 + dice2;
     var scoreArr = [];
     var highScore = Math.max(scoreArr);    
-    res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
-    scoreArr.push(totalScore);
+    res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${scorrArr.push(totalScore)}`);
+    // scoreArr.push(totalScore);
 
     if (scoreArr.length === 5) {
       // scoreArr.push(totalScore);
