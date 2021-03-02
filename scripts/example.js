@@ -73,12 +73,13 @@ robot.respond(/Roll dice/i, (res) => {
   scoreArr.push(totalScore);
 })
 
-if (scoreArr.length = 5) {
+if (scoreArr.length === 5) {
   // scoreArr.push(totalScore);
   // } else if (scoreArr.length = 5) {
     res.send(`You win with a score of ${highScore}`)
+  } else if (scoreArr.length === 1) {
+    res.send('You have 4 turns remaining.');
   }
-
 
 
 
