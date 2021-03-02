@@ -72,13 +72,13 @@ module.exports = (robot) => {
     res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${scorrArr.push(totalScore)}`);
     // scoreArr.push(totalScore);
 
-    if (scoreArr.length === 5) {
-      // scoreArr.push(totalScore);
-      // } else if (scoreArr.length = 5) {
-        res.send(`You win with a score of ${highScore}`)
-      } else if (scoreArr.length === 1) {
-        res.send('You have 4 turns remaining.');
-      }
+    // if (scoreArr.length === 5) {
+    //   // scoreArr.push(totalScore);
+    //   // } else if (scoreArr.length = 5) {
+    //     res.send(`You win with a score of ${highScore}`)
+    //   } else if (scoreArr.length === 1) {
+    //     res.send('You have 4 turns remaining.');
+    //   }
   })
 
   
