@@ -34,36 +34,6 @@ module.exports = (robot) => {
 
 
   
-// function rollDice() {
-  
-// }
-
-// // function findPlayer() {
-
-// // }
-
-// function highScore() {
-//   for (hs = 0; hs < totalScore; hs++);
-//      hs = highScore;
-// }
-
-// function resetCount() {
-//   totalScore = 0;
-// }
-
-
-//Game//
-
-
-
-// var maxRolls = 5;
-
-// if (totalScore.length > maxRolls) {
-//   for loop high score
-// }
-  
-
-  
 var scoreArr = []; 
 
 robot.respond(/Roll dice/i, (res) => {
@@ -95,25 +65,6 @@ robot.respond(/Roll dice/i, (res) => {
   })
 
   
-
-
-
-
-//   highScore();  
-//   if(rollDice === maxRolls) {
-//     res.send(`The highest score is ${highScore}`)
-//   }
-//   resetCount();
-// })
-
-
-
-
-
-
-
-
-
 
 
 
