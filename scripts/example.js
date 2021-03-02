@@ -63,7 +63,7 @@ module.exports = (robot) => {
 // }
   
 
-  var scoreArr = []; 
+  
   
 
 robot.respond(/Roll dice/i, (res) => {
@@ -72,6 +72,7 @@ robot.respond(/Roll dice/i, (res) => {
     var dice1 = Math.floor(Math.random() * 6) + 1;
     var dice2 = Math.floor(Math.random() * 6) + 1;
     var totalScore = dice1 + dice2;
+    var scoreArr = []; 
       
     var response = `You have rolled ${dice1} and ${dice2}, your total score is ${totalScore} and ${highScore} & ${Math.max(scoreArr)}`;  
 
