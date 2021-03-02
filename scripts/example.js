@@ -63,7 +63,7 @@ module.exports = (robot) => {
 // }
   
 
-  var scoreArr = [];  
+  var scoreArr = [, , , , ,];  
 
 robot.respond(/Roll dice/i, (res) => {
     var dice1 = Math.floor(Math.random() * 6) + 1;
