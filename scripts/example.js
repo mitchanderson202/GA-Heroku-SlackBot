@@ -68,8 +68,9 @@ robot.respond(/Roll dice/i, (res) => {
   var dice2 = Math.floor(Math.random() * 6) + 1;
   var totalScore = dice1 + dice2;
   var scoreArr = [];
-  var highScore = scoreArr.push(totalScore);
+  var highScore = Math.max(scoreArr);
   res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
+  scoreArr.push(totalScore);
   //  for (var hs = 0; hs < totalScore; hs++);{
   //       hs = highScore;
   //       res.send(`You win with a score of ${highScore}`);
