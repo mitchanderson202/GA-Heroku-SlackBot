@@ -74,7 +74,7 @@ robot.respond(/Roll dice/i, (res) => {
     var totalScore = dice1 + dice2;
     var scoreArr = []; 
       
-    var response = `You have rolled ${dice1} and ${dice2}, your total score is ${totalScore} and ${highScore} & ${Math.max(scoreArr)}`;  
+    var response = `You have rolled ${dice1} and ${dice2}, your total score is ${totalScore} and ${highScore} & ${Math.max.apply(null, scoreArr)}`;  
 
     res.send(response);
     scoreArr.push(totalScore);
