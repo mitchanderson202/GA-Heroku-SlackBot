@@ -81,7 +81,7 @@ robot.respond(/Roll dice/i, (res) => {
     
 
     if (scoreArr.length === 5) {
-        res.send(`You win with a score of ${highScore}`)
+        res.send(`The winning score is ${highScore}`)
       } else if (scoreArr.length === 1) {
         res.send('You have 4 turns remaining.');
       } else if (scoreArr.length === 2) {
