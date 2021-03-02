@@ -67,21 +67,21 @@ module.exports = (robot) => {
 var scoreArr = []; 
 
 robot.respond(/Roll dice/i, (res) => {
-    var highScore = Math.max(scoreArr);
+    var highScore = Math.max.apply(null, scoreArr);
     var highScoreTwo = robot.brain.get(totalScore);
     var dice1 = Math.floor(Math.random() * 6) + 1;
     var dice2 = Math.floor(Math.random() * 6) + 1;
     var totalScore = dice1 + dice2;
     
       
-    var response = `You have rolled ${dice1} and ${dice2}, your total score is ${totalScore} and ${highScore} & ${Math.max.apply(null, scoreArr)}`;  
+    var response = `You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`;  
 
     res.send(response);
     scoreArr.push(totalScore);
     
 
     if (scoreArr.length === 5) {
-        res.send(`You win with a score of ${highScore} and ${highScoreTwo}`)
+        res.send(`You win with a score of ${highScore}`)
       } else if (scoreArr.length === 1) {
         res.send('You have 4 turns remaining.');
       } else if (scoreArr.length === 2) {
