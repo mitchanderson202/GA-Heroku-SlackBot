@@ -90,7 +90,7 @@ robot.respond(/Roll dice/i, (res) => {
       } else if (scoreArr.length === 3) {
         res.send('You have 2 rolls remaining.');
       } else if (scoreArr.length === 4) {
-        res.send('You have 1 rolls remaining.');
+        res.send('You have 1 roll remaining.');
       }
   })
 
