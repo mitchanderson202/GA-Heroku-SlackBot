@@ -81,16 +81,16 @@ robot.respond(/Roll dice/i, (res) => {
     
 
     if (scoreArr.length === 5) {
-        res.send(`The winning score is ${highScore}`)
+        res.send(`GAME OVER!!! The winning score is ${highScore}`)
         scoreArr = [];
       } else if (scoreArr.length === 1) {
-        res.send('You have 4 rolls remaining.');
+        res.send('There are 4 rolls remaining.');
       } else if (scoreArr.length === 2) {
-        res.send('You have 3 rolls remaining.');
+        res.send('There are 3 rolls remaining.');
       } else if (scoreArr.length === 3) {
-        res.send('You have 2 rolls remaining.');
+        res.send('There are 2 rolls remaining.');
       } else if (scoreArr.length === 4) {
-        res.send('You have 1 roll remaining.');
+        res.send('There is 1 roll remaining.');
       }
   })
 
