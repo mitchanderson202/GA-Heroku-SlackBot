@@ -61,17 +61,16 @@ module.exports = (robot) => {
 // if (totalScore.length > maxRolls) {
 //   for loop high score
 // }
-
+  var totalScore = dice1 + dice2;
+    var scoreArr = [];
+    var highScore = Math.max(scoreArr);
 
   robot.respond(/Roll dice/i, (res) => {
     var dice1 = Math.floor(Math.random() * 6) + 1;
     var dice2 = Math.floor(Math.random() * 6) + 1;
-    var totalScore = dice1 + dice2;
-    var scoreArr = [];
-    var highScore = Math.max(scoreArr);
     res.send(`You have rolled ${dice1} and ${dice2}, your total score is ${totalScore}`);
     scoreArr.push(totalScore);
-    
+
     if (scoreArr.length === 5) {
       // scoreArr.push(totalScore);
       // } else if (scoreArr.length = 5) {
