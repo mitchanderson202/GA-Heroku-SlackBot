@@ -1,3 +1,9 @@
+Building a Slack Bot for our General Assembly JavaScript course channel. This was challenging to debug as you had to deploy on heroku then refresh the slack channel to test if it works. 
+
+March 2021
+
+Mitch
+
 # Mitchine
 
 Mitchine is a chat bot built on the [Hubot][hubot] framework. It was
@@ -199,3 +205,4 @@ Add the subdomain hubot should connect to. If you web URL looks like
 
 You may want to get comfortable with `heroku logs` and `heroku restart` if
 you're having issues.
+# GA-Heroku-SlackBot
